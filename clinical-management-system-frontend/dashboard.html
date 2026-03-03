@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Lab Technician Dashboard</title>
+    <link rel="stylesheet" href="CSS/dashboard.css">
+  
+</head>
+
+<body>
+  <!-- TOP NAVBAR -->
+  <header class="top-navbar">
+    <div class="left-content">
+      <img src="images/Hospital Logo.jpeg" class="logo" alt="Hospital Logo">
+      <h2>Welcome, Lab Technician</h2>
+    </div>
+
+   <div class="right-content">
+  <img src="images/profile.png" class="profile-pic" alt="Profile">
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <ul>
+        <li onclick="showSection('pending')">🧪 Pending Tests</li>
+        <li onclick="showSection('completed')">✔ Completed Tests</li>
+        <li onclick="showSection('testManagement')">⚙ Test Management</li>
+      </ul>
+    </aside>
+
+    <!-- CONTENT AREA -->
+    <main class="content">
+
+      <!-- PENDING TESTS -->
+      <section id="pending" class="section">
+        <h2>Pending Tests</h2>
+        <ul id="pendingList"></ul>
+      </section>
+
+      <!-- COMPLETED TESTS -->
+      <section id="completed" class="section" style="display:none;">
+        <h2>Completed Tests</h2>
+        <ul id="completedList"></ul>
+      </section>
+
+      <!-- TEST MANAGEMENT -->
+      <section id="testManagement" class="section" style="display:none;">
+        <h2>Test Management</h2>
+
+        <div class="test-form">
+          <input id="newTestName" type="text" placeholder="Enter Test Name">
+          <button onclick="addTest()">Add Test</button>
+        </div>
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Search Tests..." onkeyup="searchTest()">
+        </div>
+
+        <h3>Available Tests</h3>
+        <ul id="testList"></ul>
+      </section>
+
+      <!-- EDIT FORM -->
+      <section id="editForm" class="section" style="display:none;">
+        <h2>Update Test Status</h2>
+
+        <div class="edit-form">
+          <label>Patient Name</label>
+          <input type="text" id="editPatient" readonly>
+
+          <label>Test Name</label>
+          <input type="text" id="editTest" readonly>
+
+          <label>Result (enter value)</label>
+          <input type="text" id="editResult" placeholder="e.g. 13.2 g/dL">
+
+          <label>Reference Range (auto)</label>
+          <input type="text" id="editRange" readonly>
+
+          <label>Status</label>
+          <select id="editStatus">
+            <option value="Pending">Pending</option>
+            <option value="In-Progress">In-Progress</option>
+            <option value="Completed">Completed</option>
+          </select>
+
+          <div class="form-buttons">
+            <button onclick="updateTest()">Update</button>
+            <button onclick="cancelEdit()">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LAB REPORT SECTION -->
+      <section id="reportSection" class="section" style="display:none;">
+        <h2>Lab Test Report</h2>
+        <div id="reportBox" class="report-box printable">
+          <div class="report-row"><strong>Patient ID:</strong><span id="repPatientId"></span></div>
+          <div class="report-row"><strong>Patient Name:</strong><span id="repPatient"></span></div>
+          <div class="report-row"><strong>Test Name:</strong><span id="repTest"></span></div>
+          <div class="report-row"><strong>Result:</strong><span id="repResult"></span></div>
+          <div class="report-row"><strong>Reference Range:</strong><span id="repRange"></span></div>
+          <div class="report-row"><strong>Sample Date:</strong><span id="repDate"></span></div>
+          <div class="small-muted" style="margin-top:10px">Lab Technician: <span id="repTech">LabTech</span></div>
+
+          <div style="margin-top:12px">
+            <button onclick="printReport()">Print / Download Report</button>
+            <button onclick="showBill()">Generate Bill</button>
+            <button onclick="closeReport()">Close</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BILL SECTION -->
+      <section id="billSection" class="section" style="display:none;">
+        <h2>Billing</h2>
+        <div id="billBox" class="bill-box printable">
+          <div class="report-row"><strong>Hospital:</strong><span>ABC Hospital</span></div>
+          <div class="report-row"><strong>Bill No:</strong><span id="billNo"></span></div>
+          <div class="report-row"><strong>Patient Name:</strong><span id="billPatient"></span></div>
+          <div class="report-row"><strong>Patient ID:</strong><span id="billPatientId"></span></div>
+          <div class="report-row"><strong>Test Name:</strong><span id="billTest"></span></div>
+          <div class="report-row"><strong>Amount:</strong><span>₹<span id="billAmount"></span></span></div>
+
+          <div style="margin-top:12px">
+            <button onclick="printBill()">Print / Download Bill</button>
+            <button onclick="backToReport()">Back to Report</button>
+            <button onclick="closeBill()">Close</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="JS/dashboard.js"></script>
+</body>
+</html>

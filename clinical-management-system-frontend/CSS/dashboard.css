@@ -1,0 +1,288 @@
+
+    /* ---------- CSS (merged) ---------- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+
+    /* TOP NAVBAR */
+    .top-navbar {
+      background: #0F7173;
+      padding: 15px 20px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      height: 70px;
+      width: 70px;
+      border-radius: 50%;
+      border: 3px solid #17A398;
+      margin-right: 15px;
+    }
+
+    .profile-pic {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    .left-content {
+      display: flex;
+      align-items: center;
+    }
+
+    /* LAYOUT */
+    .container {
+      display: flex;
+      height: calc(100vh - 100px);
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 250px;
+      background: #17A398;
+      color: white;
+      padding-top: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar li {
+      padding: 15px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .sidebar li:hover {
+      background: #0F7173;
+    }
+
+    /* CONTENT */
+    .content {
+      flex: 1;
+      padding: 20px;
+      background: white;
+      overflow-y: auto;
+    }
+
+    .section h2 {
+      margin-top: 0;
+      color: #0F7173;
+    }
+
+    /* TEST MANAGEMENT FORM */
+    .test-form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .test-form input {
+      padding: 10px;
+      width: 250px;
+      border: 2px solid #0F7173;
+      border-radius: 5px;
+    }
+
+    .test-form button {
+      background: #17A398;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .test-form button:hover {
+      background: #0F7173;
+    }
+
+    /* SEARCH BAR */
+    .search-box {
+      margin-bottom: 15px;
+    }
+
+    .search-box input {
+      width: 280px;
+      padding: 10px;
+      border: 2px solid #0F7173;
+      border-radius: 5px;
+    }
+
+    /* TEST LIST */
+    #testList li {
+      padding: 10px;
+      background: #eefafa;
+      border-left: 4px solid #0F7173;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .remove-btn {
+      background: red;
+      padding: 5px 10px;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    /* LIST STYLE FOR PENDING & COMPLETED TESTS */
+    #pendingList li,
+    #completedList li {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      font-size: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* PENDING TESTS COLOR */
+    #pendingList li {
+      background: #fffbed; /* Light Yellow */
+      border-left: 5px solid #f1c40f; /* Yellow border */
+      color: #8a6d1f;
+    }
+
+    /* COMPLETED TESTS COLOR */
+    #completedList li {
+      background: #e8f9e9; /* Light Green */
+      border-left: 5px solid #27ae60; /* Green border */
+      color: #1d5e2a;
+    }
+
+    /* HEADINGS */
+    #pending h2,
+    #completed h2 {
+      color: #0F7173; /* Matching theme color */
+      margin-bottom: 15px;
+      border-bottom: 3px solid #17A398;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+
+    /* EDIT FORM STYLE */
+    .edit-form {
+      width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .edit-form input,
+    .edit-form select,
+    .edit-form textarea {
+      padding: 10px;
+      border: 2px solid #0F7173;
+      border-radius: 5px;
+    }
+
+    .form-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .form-buttons button {
+      background: #17A398;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .form-buttons button:hover {
+      background: #0F7173;
+    }
+
+    .edit-btn {
+      background: #0F7173;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    /* PRIORITY LABELS */
+    .priority {
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .priority.high {
+      background: #ff4d4d;
+      color: white;
+    }
+
+    .priority.medium {
+      background: #ffc107;
+      color: black;
+    }
+
+    .priority.low {
+      background: #8bc34a;
+      color: white;
+    }
+
+    .report-box, .bill-box {
+      background: #ffffff;
+      width: 420px;
+      padding: 20px;
+      border: 2px solid #0F7173;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      line-height: 1.6;
+    }
+
+    .report-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px dashed #eee;
+    }
+
+    .small-muted {
+      font-size: 13px;
+      color: #666;
+    }
+
+    button {
+      background: #17A398;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0F7173;
+    }
+
+    /* print-only helper - we will use content windows for printing, but keep these in case */
+    @media print {
+      body * { visibility: hidden; }
+      .printable, .printable * { visibility: visible; }
+      .printable { position: absolute; left: 0; top: 0; }
+    }
+  

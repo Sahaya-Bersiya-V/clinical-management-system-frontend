@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0C5D5F, #0F7173);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #ffffff;
+}
+
+/* Main container */
+.login-container {
+    width: 380px;
+    text-align: center;
+}
+
+
+
+.hospital-logo h2 {
+    margin: 10px 0 0;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.hospital-logo p {
+    margin: 5px 0 20px;
+    font-size: 15px;
+    color: #e5ffff;
+}
+
+/* Login box */
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.login-box h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Input fields */
+.input-field {
+    text-align: left;
+    margin-bottom: 18px;
+    color: #e8ffff;
+}
+
+.input-field label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b5ecec;
+    border-radius: 8px;
+    background: #ffffff;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background: #0C5D5F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #0F7173;
+}
+
+/* Forgot link */
+.forgot {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #d7ffff;
+    text-decoration: none;
+}
+.hospital-logo img{
+     height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0F7173;
+}
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.logout-btn {
+  background: #ff4b4b;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  margin-left: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #d93636;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+/* Background Video */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Behind the content */
+    filter: brightness(0.4); /* Darken for readability (optional) */
+}
+
+/* Ensure body takes up full screen */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+

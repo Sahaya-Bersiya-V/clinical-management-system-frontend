@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Login</title>
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+    <source src="images/dashboard_video.mp4" type="video/mp4">
+</video>
+
+
+<div class="login-container">
+
+    <div class="hospital-logo">
+        <img src="images/Hospital Logo.jpeg" alt="Hospital Logo">
+        <h2>Relief</h2>
+        <p>Homecare & Medical Support</p>
+    </div>
+
+    <div class="login-box">
+        <h3>👨‍⚕️ Login to Continue</h3>
+
+        <form class="myForm">
+            <div class="input-field">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter Username">         
+                <span id="emailError" class="error"></span><br>
+            </div>
+
+            <div class="input-field">
+                <label>Password</label>
+        <input type="password" id="password" placeholder="Enter Password">
+        <span id="passwordError" class="error"></span><br>
+
+            </div>
+
+            <button type="button" class="login-btn" onclick="validateLogin()">Login</button>
+
+            <a href="#" class="forgot">Forgot password?</a>
+            
+        </form>
+    </div>
+
+</div>
+ <script src="JS/login.js"></script>
+</body>
+</html>
